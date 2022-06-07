@@ -17,6 +17,16 @@ body {
   width: 100%;
 }
 
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .container-fluid {
   width: 100%;
 }
@@ -46,10 +56,11 @@ body {
   height: 4rem;
   width: 40rem;
   margin: 1rem;
-  border-radius: 15px;
+  padding: 0 1rem;
+  border-radius: 50px;
   background: #e0e0e0;
-  -webkit-box-shadow: -5px 5px 10px #898989, 5px -5px 10px #ffffff;
-          box-shadow: -5px 5px 10px #898989, 5px -5px 10px #ffffff;
+  -webkit-box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+          box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
 }
 
 .navbar-wrapper nav.navbar .navbar-brand {
@@ -70,14 +81,21 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
   width: 100%;
 }
 
 .navbar-wrapper nav.navbar .navbar-items button {
-  border: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  display: none;
 }
 
 .navbar-wrapper nav.navbar .navbar-items ul {
@@ -88,6 +106,71 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.navbar-wrapper nav.navbar .navbar-items ul li {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar-wrapper nav.navbar .navbar-items ul li a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.navbar-wrapper nav.navbar .navbar-items ul li:hover {
+  background-color: #A3B1C6;
+}
+
+@media screen and (max-width: 576px) {
+  .navbar-wrapper nav.navbar .navbar-items {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    padding: 0 1rem;
+  }
+  .navbar-wrapper nav.navbar .navbar-items button {
+    display: block;
+    z-index: 2;
+  }
+  .navbar-wrapper nav.navbar .navbar-items ul {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #E0E0E0;
+    z-index: 1;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: all .1s;
+    transition: all .1s;
+  }
+  .navbar-wrapper nav.navbar .navbar-items ul li {
+    padding: 2.5rem 0;
+  }
+  .navbar-wrapper nav.navbar .navbar-items .slide {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 .tentang {
@@ -119,10 +202,10 @@ body {
       justify-content: space-around;
   padding: 2rem;
   margin: 0;
-  border-radius: 20px;
+  border-radius: 50px;
   background: #e0e0e0;
-  -webkit-box-shadow: 7px 7px 14px #7b7b7b, -7px -7px 14px #ffffff;
-          box-shadow: 7px 7px 14px #7b7b7b, -7px -7px 14px #ffffff;
+  -webkit-box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+          box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
 }
 
 .tentang div.tentang-deskripsi h1 {
@@ -158,5 +241,20 @@ body {
             flex-flow: column;
     padding: 1rem .9rem;
   }
+}
+
+.project, .contact {
+  height: 100%;
+  padding: 16rem 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=site.css.map */

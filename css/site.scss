@@ -1,4 +1,9 @@
-$color-base :   #E0E0E0;
+$color-base :  #E0E0E0;
+$color-1:      #ffffff;
+$color-2:      #E0E5EC;
+$color-3:      #C2CBD9;
+$color-4:      #A3B1C6;
+$color-black : #000000;
 
 *{
     margin: 0;
@@ -21,6 +26,11 @@ body{
     width: 100%;
 }
 
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
 .container-fluid {
     width: 100%;    
 
@@ -41,10 +51,11 @@ body{
         height: 4rem;
         width: 40rem;
         margin: 1rem;
-        border-radius: 15px;
+        padding: 0 1rem;
+        border-radius: 50px;
         background: #e0e0e0;
-        box-shadow: -5px 5px 10px #898989,
-            5px -5px 10px #ffffff;
+        box-shadow: 20px 20px 60px #bebebe,
+            -20px -20px 60px #ffffff;
 
         .navbar-brand {
             display: flex;
@@ -58,18 +69,85 @@ body{
         }
         .navbar-items {
             display: flex;
-            justify-content: space-between;
+            justify-content: end;
             width: 100%;
 
             button {
-                border: 0;
+                background-color: transparent;
+                background-repeat: no-repeat;
+                color: $color-black;
+                border: none;
+                cursor: pointer;
+                overflow: hidden;
+                outline: none;
+                display: none;
             }
 
             ul {
+
                 width: 70%;
                 list-style: none;
                 display: flex;
                 justify-content: space-around;
+
+                li {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+            
+            
+                    a {
+                        text-decoration: none;
+                        color: $color-black;
+                    }
+            
+                }
+                
+                li:hover {
+                    background-color: $color-4;
+                }
+            }
+        }
+
+                // Ukuran Mobile
+        @media screen and (max-width : 576px) {
+
+            .navbar-items {
+                width: 100%;
+                display: flex;
+                justify-content: end;
+                padding: 0 1rem;
+            
+                button {
+                    display: block;
+                    z-index: 2;
+                
+                }
+            
+                ul {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    width: 100vw;
+                    height: auto;
+                    flex-direction: column;
+                    background-color: $color-base;
+                    z-index: 1;
+                    transform: translateX(-100%);
+                    transition: all .1s;
+                   
+            
+                    li {
+                        padding: 2.5rem 0;
+                    }
+                }
+            
+                .slide {
+                    transform: translateY(0);
+                }
             }
         }
        
@@ -94,10 +172,10 @@ body{
 
         padding: 2rem ;
         margin: 0;
-        border-radius: 20px;
+        border-radius: 50px;
         background: #e0e0e0;
-        box-shadow: 7px 7px 14px #7b7b7b,
-            -7px -7px 14px #ffffff;
+        box-shadow: 20px 20px 60px #bebebe,
+            -20px -20px 60px #ffffff;
    
         h1{
             text-align: center !important;
@@ -125,3 +203,13 @@ body{
     }
   
 }
+
+.project, .contact{
+    height: 100%;
+    padding: 16rem 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
