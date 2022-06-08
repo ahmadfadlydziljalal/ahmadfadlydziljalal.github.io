@@ -2,6 +2,7 @@
 
 @section('body')
 <div class="container">
+
     <article class="flex flex-column flex-gap-2">
         <div class="card animate__animated animate__backInLeft">
 
@@ -26,7 +27,6 @@
             </div>
 
         </div>
-    
     </article>
 
 </div>

@@ -287,7 +287,6 @@ p{
     gap: 2em;
 }
 
-
 .justify-content-center {
     justify-content: center;
 }
@@ -343,6 +342,22 @@ p{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 2rem;
+
+    @media screen and (max-width : 820px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width : 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width : 576px) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+
 }
 
 // Component
