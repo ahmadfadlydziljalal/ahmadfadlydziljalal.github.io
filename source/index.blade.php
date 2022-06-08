@@ -3,12 +3,10 @@
 @section('body')
 
 <div class="container-fluid">
-
-    <div class="flex justify-content-space-evenly flex-wrap flex-gap-2" style="height: 100%;">
-
-        <div class="card animate__animated animate__backInLeft bg-color-2">
+    <div class="grid-flow">
+        <div class="card  animate__animated animate__backInLeft bg-color-2">
             <div class="flex flex-column flex-gap-1">
-                <h1 class="card-title">Fadly Dzil</h1>
+                <h1 class="card-title text-center ">Fadly Dzil</h1>
                 <div class="flex flex-column flex-gap-1 align-items-center">
                     <p class="order-1 order-sm-2">
                         Seorang PHP web developer, <br />
@@ -24,7 +22,7 @@
 
         <div class="card animate__animated animate__backInLeft">
             <div class="flex flex-column flex-gap-1">
-                <h1 class="card-title">Yii2 Developer</h1>
+                <h1 class="card-title text-center">Yii2 Developer</h1>
                 <div class="flex flex-sm-column flex-md-row flex-lg-column flex-gap-1 align-items-center">
                     <p class="order-1 order-sm-2">
                         Basic template, Advance Template, Gii, Yii2 Admin, Kartik Widget,
@@ -71,10 +69,10 @@
             </div>
         </div>
 
-        <div class="card animate__animated animate__backInRight">
+        <div class="card  animate__animated animate__backInRight">
             <div class="flex flex-column flex-gap-1">
 
-                <h1 class="card-title">Laravel Developer</h1>
+                <h1 class="card-title text-center">Laravel Developer</h1>
 
                 <div class="flex flex-sm-column flex-md-row flex-lg-column flex-gap-1 align-items-center">
 
@@ -96,7 +94,7 @@
 
         <div class="card animate__animated animate__backInUp">
             <div class="flex flex-column flex-gap-1">
-                <h1 class="card-title">Frontend Stack</h1>
+                <h1 class="card-title text-center">Frontend Stack</h1>
 
                 <div class="flex flex-sm-column flex-md-row flex-lg-column flex-gap-1 align-items-center">
 
@@ -123,7 +121,7 @@
 
         <div class="card animate__animated animate__backInUp">
             <div class="flex flex-column flex-gap-1">
-                <h1 class="card-title">Database Stack</h1>
+                <h1 class="card-title text-center">Database Stack</h1>
 
                 <div class="flex flex-sm-column flex-md-row flex-lg-column flex-gap-1 align-items-center">
 
@@ -148,7 +146,7 @@
 
         <div class="card animate__animated animate__backInUp">
             <div class="flex flex-column flex-gap-1">
-                <h1 class="card-title">Mobile Developer</h1>
+                <h1 class="card-title text-center">Mobile Developer</h1>
 
                 <div class="flex flex-sm-column flex-md-row flex-lg-column flex-gap-1 align-items-center">
 
@@ -186,8 +184,6 @@
 
             </div>
         </div>
-
-
     </div>
 </div>
 @endsection
