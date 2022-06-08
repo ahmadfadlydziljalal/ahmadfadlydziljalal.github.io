@@ -6,7 +6,7 @@
 
     <div class="flex justify-content-space-evenly flex-wrap flex-gap-2" style="height: 100%;">
 
-        <div class="card animate__animated animate__backInLeft">
+        <div class="card animate__animated animate__backInLeft bg-color-2">
             <div class="flex flex-column flex-gap-1">
                 <h1 class="card-title">Fadly Dzil</h1>
                 <div class="flex flex-column flex-gap-1 align-items-center">
