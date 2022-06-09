@@ -18,14 +18,16 @@
     <div class="wrapper">
 
         <header>
+
             <div class="navbar-wrapper">
+
                 <nav class="navbar">
 
                     <div class="navbar-brand">
                         <a href="/">
                             <h3 class="navbar-brand-text">
                                 <i class="fa-solid fa-heart"></i>
-                                CoPasModifDev.
+                                {{$page->company}}
                             </h3>
                         </a>
                     </div>
@@ -38,23 +40,27 @@
                         </button>
 
                         <ul>
-                            <li>
-                                <a href="/">Beranda</a>
+                            <li class="{{ $page->selected('/') }}">
+                                <a class="{{ $page->selected('/') }}" href="{{ $page->baseUrl }}/">Beranda</a>
                             </li>
-                            <li>
-                                <a href="/project">Project</a>
-                            </li>
-                            <li>
-                                <a href="/docs">Docs</a>
-                            </li>
-                            <li>
-                                <a href="/blog">Blog</a>
-                            </li>
-                            <li>
-                                <a href="/contact">Contact</a>
-                            </li>
-                        </ul>
 
+                            <li class="{{ $page->selected('project') }}">
+                                <a class="{{ $page->selected('project') }}" href="{{ $page->baseUrl }}/project">Project</a>
+                            </li>
+
+                            <li class="{{ $page->selected('docs') }}">
+                                <a class="{{ $page->selected('docs') }}" href="{{ $page->baseUrl }}/docs">Docs</a>
+                            </li>
+
+                            <li class="{{ $page->selected('blog') }}">
+                                <a class="{{ $page->selected('blog') }}" href="{{ $page->baseUrl }}/blog">Blog</a>
+                            </li>
+
+                            <li class="{{ $page->selected('contact') }}">
+                                <a class="{{ $page->selected('contact') }}" href="{{ $page->baseUrl }}/contact">Contact</a>
+                            </li>
+                            
+                        </ul>
                     </div>
                 </nav>
             </div>
@@ -64,6 +70,12 @@
         <main class="main">
             @yield('body')
         </main>
+
+        <footer class="footer flex justify-content-between flex-sm-column align-items-center">
+            <p class="color-4">© {{ date('M, Y') }}, By: Fadly Dzil</p>
+            <p class="color-4">Powered By: <a href="https://jigsaw.tighten.com/" target="_blank" rel="noreferrer">Laravel Jigsaw</a> </p>
+        </footer>
+
     </div>
 
 </body>
